@@ -218,8 +218,8 @@ def home():
 def run_flask():
     app.run(host="0.0.0.0", port=8080)
 
+threading.Thread(target=auto_announcement).start()
 threading.Thread(target=run_flask).start()
 
-# START POLLING
-threading.Thread(target=auto_announcement).start()
+bot.remove_webhook()
 bot.polling(none_stop=True)
