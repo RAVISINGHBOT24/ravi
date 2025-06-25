@@ -206,6 +206,9 @@ def warn_user(message):
         bot.send_message(GROUP_ID, f"⚠️ **𝗨𝗦𝗘𝗥𝗦 {user_id} 𝗞𝗢 𝗪𝗔𝗥𝗡𝗜𝗡𝗚 {warn_count[user_id]}/𝟯 𝗪𝗔𝗥𝗡𝗜𝗡𝗚 𝗠𝗜𝗟 𝗚𝗔𝗬𝗜 𝗛𝗔𝗜!**")
 
 
+from flask import Flask
+import threading
+
 app = Flask(__name__)
 
 @app.route("/")
