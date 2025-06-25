@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bgmi-bot
+    env: python
+    plan: free
+    buildCommand: |
+      chmod +x Ravi
+    startCommand: python3 ddos.py
+    autoDeploy: true
